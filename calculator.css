@@ -1,0 +1,307 @@
+.calculator__form .container > h2 {
+    text-align: center;
+}
+.calc__form {
+    position: relative;
+    display: grid;
+    grid-gap: clamp(20px, 2.857vw, 40px);
+    grid-template-columns: 2fr 1fr;
+}
+.calc__form .form__head {
+    display: flex;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.number__rooms {
+    display: flex;
+    grid-gap: 10px;
+    flex-flow: column;
+}
+.rooms-title {
+    display: flex;
+    grid-gap: 10px;
+    align-items: center;
+}
+.help-wrapper {
+    position: relative;
+    display: flex;
+}
+.help-trigger {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../../img/icons/help.svg') no-repeat center;
+    cursor: pointer;
+}
+.help-info {
+    position: absolute;
+    left: calc(50% - 92px);
+    width: 0;
+    height: 0;
+    display: flex;
+    grid-gap: 5px;
+    flex-flow: column;
+    align-items: flex-start;
+    padding: 5px 10px;
+    background: #0000008f;
+    border-radius: 15px;
+    transition: .3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+    opacity: 0;
+}
+.help-info.help-info--active {
+    width: 185px;
+    height: auto;
+    pointer-events: all;
+    opacity: 1;
+    z-index: 5;
+}
+.help-wrapper .help-info span {
+    color: #fff;
+    font-size: 13px;
+}
+.number__rooms-container {
+    display: grid;
+    grid-gap: clamp(5px, 1.429vw, 20px);
+    grid-template-columns: repeat(5 ,0.5fr);
+}
+.number__rooms .room__item {
+    width: clamp(30px, 3.571vw, 50px);
+    height: clamp(30px, 3.571vw, 50px);
+    justify-self: center;
+    border-radius: 50%;
+}
+.custom__radio,
+.custom__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s all;
+}
+.custom__radio input,
+.custom__checkbox input {
+    display: none;
+}
+.custom__radio:has(input[type=radio]:checked),
+.custom__checkbox:has(input[type=checkbox]:checked) {
+    background: #000;
+    color: #fff;
+}
+
+.type__cleaning {
+    display: flex;
+    grid-gap: 10px;
+    flex-flow: column;
+}
+.type__cleaning-title {
+    display: flex;
+    grid-gap: 10px;
+}
+.type__cleaning-container {
+    display: grid;
+    grid-gap: clamp(10px, 1.429vw, 20px);
+    grid-template-columns: repeat(3, 1fr);
+}
+.type__item {
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: clamp(12px, 1.286vw, 18px);
+    text-align: center;
+}
+
+
+
+.additional__services {
+    display: flex;
+    grid-gap: 20px;
+    flex-flow: column;
+    margin-top: 20px;
+}
+.reset__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reset__btn {
+    color: #000;
+    font-size: clamp(14px, 1.286vw, 18px);
+    border: 1px solid #000;
+    border-radius: 15px;
+    transition: .3s all;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+}
+@media (hover: hover) {
+    .reset__btn:hover {
+        color: #fff;
+        background: #000;
+    }
+}
+.service__item {
+    width: 100%;
+    display: grid;
+    grid-gap: clamp(5px, 1.429vw, 20px);
+    /* grid-template-columns: minmax(100px, 1fr) minmax(50px, 1fr) minmax(150px, 1fr); */
+    grid-template-columns: minmax(100px, 1fr) minmax(40px, 1fr) minmax(120px, 0.3fr) 24px;
+    align-items: center;
+}
+.service__item .price {
+    font-size: clamp(12px, 1.143vw, 16px);
+    color: #b5b0ac;
+}
+.service__item span {
+    font-size: clamp(12px, 1.143vw, 16px);
+    hyphens: auto;
+}
+.service__item .input__btns {
+    display: flex;
+    grid-gap: 10px;
+    align-items: center;
+    justify-self: center;
+}
+.service__item .custom__checkbox {
+    height: 50px;
+}
+.service__item input {
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: .3s all;
+}
+.service__item input:hover {
+    border-bottom: 1px solid #000;
+}
+.service__item input[type="number"]::-webkit-outer-spin-button,
+.service__item input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.service__item input[type="number"] {
+    -moz-appearance: textfield;
+}
+.service__item input[type="number"]:hover,
+.service__item input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+.service__item input[type="number"]::-webkit-inner-spin-button,
+.service__item input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input__btns button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    line-height: 210%;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s all;
+}
+.input__btns button:hover {
+    background: #000;
+    color: #fff;
+}
+.input__btns button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+}
+.input__btns .service-count {
+    width: clamp(30px, 3.571vw, 50px);
+    text-align: center;
+}
+.sidebar__form {
+    display: flex;
+    grid-gap: 20px;
+    flex-flow: column;
+}
+
+.sidebar__form input,
+.sidebar__form textarea {
+    padding: 5px 10px;
+    border: 1px solid #000;
+}
+.sidebar__form textarea {
+    resize: vertical;
+}
+.datepicker__wrapper {
+    position: relative;
+}
+.datepicker__wrapper::after {
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 10px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/calendar.png') no-repeat center;
+    background-size: cover;
+    pointer-events: none;
+}
+.datepicker {
+    width: 100%;
+    cursor: pointer;
+}
+.calc-form__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    pointer-events: none;
+    background: #ffffff88;
+}
+.calc-form-overlay--active {
+    pointer-events: all;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1400px) {
+    .calc__form .form__head {
+        flex-flow: column;
+
+    }
+    .calc__form .form__head .number__rooms,
+    .calc__form .form__head .type__cleaning {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .calc__form {
+        grid-template-columns: 1fr;
+    }
+    .help-info {
+        left: auto;
+        right: 30px;
+        bottom: 0;
+    }
+    .type__cleaning-title .help-info {
+        left: 0;
+        right: auto;
+        bottom: 0;
+    }
+}
+@media screen and (max-width: 576px) {
+    .service__item .price {
+        text-align: center;
+    }
+}
+
+
